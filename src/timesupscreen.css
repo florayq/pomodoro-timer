@@ -1,0 +1,49 @@
+body{
+    background-image: url('timesupscreen.png');
+    position: fixed;
+    background-repeat: no-repeat;
+    width: 800px;
+    height: 600px;
+}
+
+.close-btn {
+    background: transparent;
+    background-image: url('closebtn.png');
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    top: 19px;
+    left: 714px;
+    border: none;
+}
+
+.minimize-btn {
+    background: transparent;
+    background-image: url('minimizebtn.png');
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    top: 19px;
+    left: 630px;
+    border: none;
+}
+
+.repeat {
+    background: transparent;
+    background-image: url('repeatbtn.png');
+    border: none;
+    position: absolute;
+    width: 231px;
+    height: 67px;
+    left: 284px;
+    top: 432px;
+}
+
+.animation {
+    width: 200px;
+    height: 200px;
+    transition: opacity 0.5s ease-in-out;
+    margin-left: 300px;
+    margin-top: 200px;
+    /* align-items: center; */
+}

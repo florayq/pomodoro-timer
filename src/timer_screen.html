@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pomodoro Timer</title>
+        <link rel="stylesheet" href="timer_screen.css" />
+        <script defer src="renderer.js"></script>
+        <!-- <script defer src="renderer2.js"></script> -->
+    </head>
+    <body>
+        <div>
+            <button id="minimize-btn" class="minimize-btn"></button>
+            <button id="close-btn" class="close-btn"></button>
+            <img id="animation" class="animation" src="basebirdie.png" alt="Bird Pic">
+            <!-- <div class="animationdiv">
+                <img id="animation" class="animation" src="basebirdie.png" alt="Animation Frame">
+            </div> -->
+            <div class="countdown">
+                <h1 id="countdown">30:00</h1>
+            </div>
+            <button class="endtimer" onclick="window.location.href='index.html';"></button>
+        </div>
+    </body>
+    <script>
+        const countdown = document.getElementById('countdown');
+        let timeLeft = 1799; //should be 1799 but changed for convenience of debugging
+        let timer = setInterval(updateCountdown, 1000);
+        
+        // const images = [
+        //     'basebirdie.png',
+        //     'blinkbirdie.png',
+        // ];
+
+        // let currentFrame = 0;
+        // const imageElement = document.getElementById('animation');
+
+        // function animate() {
+        //     imageElement.src = images[currentFrame];
+        //     currentFrame = (currentFrame + 1) % images.length;
+        // }
+
+        // setInterval(animate, 1000);
+
+        function updateCountdown(){
+            let minutes = Math.floor(timeLeft / 60);
+            let seconds = timeLeft % 60;
+
+            if (minutes < 10) minutes = "0" + minutes;
+            if (seconds < 10) seconds = "0" + seconds;
+
+            countdown.innerHTML = `${minutes}:${seconds}`;
+            // console.log(timeLeft);
+            if (timeLeft === 0) { // makes sure that timeLeft is 0 so even if "0" it wont work -- "0" would work for ==
+                window.location.href = "times_up.html";
+                clearInterval(timer); // Stop the timer once it reaches zero -chat
+            } else {
+                timeLeft--;
+            }
+        }
+        // for (let i = 1800; i > 0; i--) {
+        //     let minutes = Math.floor(i / 60) + "";
+        //     let seconds = i % 60 + "";
+        //     if (minutes.length  == 1){
+        //         minutes = "0" + minutes;
+        //     }
+        //     if (seconds.length == 1) {
+        //         seconds = "0" + seconds;
+        //     }
+        //     let time = minutes + ":" + seconds;
+        //     countdown.innerHTML = time;
+        //     setTimeout(() => {
+        //         //nothing happen
+        //     }, 1000);
+        // }
+    </script>
+</html>

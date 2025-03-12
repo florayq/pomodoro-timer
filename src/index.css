@@ -1,0 +1,46 @@
+body {
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  margin: auto;
+  max-width: 38rem;
+  padding: 2rem; */
+  background-image: url('homepage.png');
+  position: fixed;
+  background-repeat: no-repeat;
+  width: 800px;
+  height: 600px;
+}
+
+.startbutton {
+  background: transparent;
+  position: absolute;
+  top: 321px;
+  left: 284px;
+  background-image: url('startbtn.png');
+  background-repeat: no-repeat;
+  width: 231px;
+  height: 67px;
+  border: none;
+}
+
+.close-btn {
+  background: transparent;
+  background-image: url('closebtn.png');
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  top: 19px;
+  left: 714px;
+  border: none;
+}
+
+.minimize-btn {
+  background: transparent;
+  background-image: url('minimizebtn.png');
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  top: 19px;
+  left: 630px;
+  border: none;
+}

@@ -1,0 +1,65 @@
+body{
+    background-image: url('timerscreen.png');
+    position: fixed;
+    background-repeat: no-repeat;
+    width: 800px;
+    height: 600px;
+}
+
+.close-btn {
+    background: transparent;
+    background-image: url('closebtn.png');
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    top: 19px;
+    left: 714px;
+    border: none;
+}
+
+.minimize-btn {
+    background: transparent;
+    background-image: url('minimizebtn.png');
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    top: 19px;
+    left: 630px;
+    border: none;
+}
+
+.countdown {
+    /* align-items: center; */
+    /* text-align: center; */
+    /* margin-top: 400px; */
+    margin-left: 360px;
+    /* left: 300px; */
+    /* top: 600px; */
+}
+
+.endtimer{
+    background: transparent;
+    background-image: url('endtimer.png');
+    border: none;
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    left: 325px;
+    top: 478px;
+}
+
+.animation {
+    width: 200px;
+    height: 200px;
+    transition: opacity 0.5s ease-in-out;
+    margin-left: 300px;
+    margin-top: 136px;
+}
+
+.animationdiv{
+    align-items: center;
+    /* width: 200px;
+    height: 200px; */
+    /* left: 313px; */
+    margin-top: 136px;
+}
